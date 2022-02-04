@@ -13,3 +13,9 @@ print(guests.index('Masha'))
 guests.append('Galina')
 for guest in guests:
     print(f"Hi, {guest.title()}! You are invited.")
+print('Only two seats are available')
+while int(len(guests)) > 2:
+    last_value = guests.pop(-1)
+    print(f"You are out, {last_value}")
+for guest in guests:
+    print(f"Hi, {guest.title()}! You are invited.")
