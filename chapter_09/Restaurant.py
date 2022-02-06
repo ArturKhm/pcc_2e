@@ -24,23 +24,46 @@ class Restaurant:
         self.number_served += increment
 
 
-my_restaurant = Restaurant('ArtRes', 'european')
-print(my_restaurant.restaurant_name)
-print(my_restaurant.cuisine_type)
-my_restaurant.describe_restaurant()
-my_restaurant.open_restaurant()
+class IceCreamStand(Restaurant):
+    """Subclass of restaurant"""
 
-my_second_res = Restaurant('Second', 'asian')
-my_third_res = Restaurant('Third', 'african')
-# my_list = [my_restaurant, my_second_res, my_third_res]
-# for res in my_list:
-#     print(res.describe_restaurant)
-my_restaurant.describe_restaurant()
-my_second_res.describe_restaurant()
-my_third_res.describe_restaurant()
+    def __init__(self, restaurant_name, cuisine_type):
+        """
+        Initialize attributes of the parent class.
+        Then initialize attributes specific to an electric car.
+        """
+        super().__init__(restaurant_name, cuisine_type)
+        self.flavors = []
 
-print(my_restaurant.number_served)
-my_restaurant.number_served = 10
-print(my_restaurant.number_served)
-my_restaurant.increment_number_served(6)
-print(my_restaurant.number_served)
+    def show_flavors(self):
+        if len(self.flavors) == 0:
+            print('There is no flavors')
+        else:
+            print("List of flavors:")
+            for item in self.flavors:
+                print(f"\t-{item}")
+
+
+myIceCream = IceCreamStand('Ice-food', 'european')
+myIceCream.flavors = ['shoco', 'vanilla']
+myIceCream.show_flavors()
+# my_restaurant = Restaurant('ArtRes', 'european')
+# print(my_restaurant.restaurant_name)
+# print(my_restaurant.cuisine_type)
+# my_restaurant.describe_restaurant()
+# my_restaurant.open_restaurant()
+#
+# my_second_res = Restaurant('Second', 'asian')
+# my_third_res = Restaurant('Third', 'african')
+# # my_list = [my_restaurant, my_second_res, my_third_res]
+# # for res in my_list:
+# #     print(res.describe_restaurant)
+# my_restaurant.describe_restaurant()
+# my_second_res.describe_restaurant()
+# my_third_res.describe_restaurant()
+#
+# print(my_restaurant.number_served)
+# my_restaurant.number_served = 10
+# print(my_restaurant.number_served)
+# my_restaurant.increment_number_served(6)
+# print(my_restaurant.number_served)
