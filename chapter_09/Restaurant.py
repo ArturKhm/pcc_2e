@@ -5,6 +5,7 @@ class Restaurant:
         """Initialize attributes to describe a restaurant"""
         self.restaurant_name = restaurant_name
         self.cuisine_type = cuisine_type
+        self.number_served = 0
 
     def describe_restaurant(self):
         """Return a description of the resraurant"""
@@ -13,6 +14,14 @@ class Restaurant:
     def open_restaurant(self):
         """Return a message that the restaurant is open"""
         print(f"{self.restaurant_name.title()} is open")
+
+    def set_number_served(self, new_number):
+        """Set number served"""
+        self.number_served = new_number
+
+    def increment_number_served(self, increment):
+        """Increment number served by increment"""
+        self.number_served += increment
 
 
 my_restaurant = Restaurant('ArtRes', 'european')
@@ -29,3 +38,9 @@ my_third_res = Restaurant('Third', 'african')
 my_restaurant.describe_restaurant()
 my_second_res.describe_restaurant()
 my_third_res.describe_restaurant()
+
+print(my_restaurant.number_served)
+my_restaurant.number_served = 10
+print(my_restaurant.number_served)
+my_restaurant.increment_number_served(6)
+print(my_restaurant.number_served)
