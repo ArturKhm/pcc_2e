@@ -23,6 +23,7 @@ class Car:
     def increment_odometer(self, miles):
         self.odometer_reading += miles
 
+
 class ElectricCar(Car):
     """Represent aspects of a car, specific to electric vehicles."""
     
