@@ -9,7 +9,7 @@ for filename in filenames:
             text = file_object.read()
             words = text.split()
             num_words = len(words)
-            num_counter = text.count(counter)
+            num_counter = text.lower().count(counter)
         print(f"{num_words}, {num_counter}")
     except FileNotFoundError:
         # print(f"{filename} doesn't exist")
