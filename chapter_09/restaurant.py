@@ -1,3 +1,6 @@
+"""Module for restaurant"""
+
+
 class Restaurant:
     """A class for a restaurant"""
 
@@ -43,10 +46,9 @@ class IceCreamStand(Restaurant):
             for item in self.flavors:
                 print(f"\t-{item}")
 
-
-myIceCream = IceCreamStand('Ice-food', 'european')
-myIceCream.flavors = ['shoco', 'vanilla']
-myIceCream.show_flavors()
+# myIceCream = IceCreamStand('Ice-food', 'european')
+# myIceCream.flavors = ['shoco', 'vanilla']
+# myIceCream.show_flavors()
 # my_restaurant = Restaurant('ArtRes', 'european')
 # print(my_restaurant.restaurant_name)
 # print(my_restaurant.cuisine_type)
