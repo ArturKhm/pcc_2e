@@ -1,0 +1,3 @@
+In Python you can write code
+In Python you can debug
+In Python you can make programmes
