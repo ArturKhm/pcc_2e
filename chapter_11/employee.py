@@ -14,3 +14,5 @@ class Employee:
 
 # me = Employee('Art', 'Khm', 1_000_000)
 # print(me.salary)
+
+import site;print(site.getsitepackages())
