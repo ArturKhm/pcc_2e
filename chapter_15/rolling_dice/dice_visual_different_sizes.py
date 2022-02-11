@@ -5,7 +5,7 @@ from die import Die
 
 # Create a D6 and a D10.
 die_1 = Die()
-die_2 = Die(10)
+die_2 = Die()
 
 # Make some rolls, and store results in a list.
 results = []
